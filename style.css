@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&');
+
+*::after, *::before, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 50px 10px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: #121214;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background-color: #202024;
+    min-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 60px 80px rgba(0,0,0,0.60), 0 45px 26px rgba(0,0,0,0.14);
+}
+
+.header {
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(5,5,5, .4), rgba(5, 5, 5, 1)), url('https://media.tenor.com/rGJO11j_8QsAAAAM/kurona-math.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header span {
+    background-image: linear-gradient(45deg,rgba(255, 192, 203, 0.85), blueviolet);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    position: relative;
+    width: 75%;
+    margin-top: 20px;
+}
+
+.box input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgba(240, 248, 255, 0.618);
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+.error {
+    border-color: red !important;
+}
+
+.error::placeholder {
+    color: red !important;
+}
+
+.box input::placeholder {
+    opacity: 0;
+    transition: .3s;
+}
+
+.box input:focus {
+    border-color: blueviolet;
+}
+
+.box input:focus::placeholder {
+    opacity: 1;
+    transition: .4s;
+}
+
+.box input:focus ~ label, 
+.box input:not(:placeholder-shown) ~ label {
+    transform: translateY(-23px);
+    left: 10px;
+    transition: .3s;
+    font-size: .7rem;
+    background-color: #202024;
+}
+
+.box label {
+    pointer-events: none;
+    position: absolute;
+    font-size: 1.1rem;
+    left: 20px;
+    bottom: 10px;
+    color: #f0f8ff9e;
+    transition: .3s;
+    padding: 0 2px;
+}
+
+.box-result {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+    box-shadow: 9px 0px 30px rgba(0, 0, 5, 0.3);
+    border-radius: 5px;
+
+}
+
+.line-copy {
+    width: 100%;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#result-title {
+    text-transform: capitalize;
+    font-size: .9rem;
+    color: #f0f8ff9e;
+}
+
+#btn-copy-result {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    text-transform: capitalize;
+    font-size: .9rem;
+    cursor: pointer;
+    border: none;
+    color: #f0f8ff9e;
+}
+
+#btn-copy-result span {
+    font-size: .9rem;
+    margin-left: 2px;
+}
+
+#textarea-result {
+    height: auto;
+    width: 100%;
+    flex: 1;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    outline: none;
+    background-color: transparent;
+    resize: none;
+    font-size: 1rem;
+    color: aliceblue;
+    padding: 10px;
+    border: none;
+    background-color: #121214;
+} 
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#btnCalc {
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    color: aliceblue;
+    background-color: blueviolet;
+    cursor: pointer;
+    margin: 8px;
+    letter-spacing: .2rem;
+    transition: .3s;
+}
+
+#btnCalc:hover {
+    background-color: rgb(96, 41, 148);
+    transition: .3s;
+}
+
+.about {
+    width: 75%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.love {
+    color: rgb(232, 97, 171);
+    font-size: 1.5rem;
+}
+
+.dev {
+    text-decoration: none;
+    color: #05f605;
+    cursor: pointer;
+}
+
+.dev:hover {
+    text-decoration: underline;
+}
+
+.copy-right {
+    font-size: .8rem;
+    margin-bottom: 10px;
+}
